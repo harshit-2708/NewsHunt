@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>NEWSHUNT</title> 
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<!-- Optional theme -->
+  </head> 
+  <body>  
+    <div class="jumbotron" <style="color:black"> 
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" style="padding-left:55px"><h1 style="color:#a989305c">NEWSHUNT</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
+      </ul>
+    <form class="form-inline my-2 my-lg-0" action='/search' method='GET' style="padding-right:55px">
+      <input class="form-control mr-sm-2" type="search" name='query' placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  </nav>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" style="padding:15px" >
+    <li class="nav-item active" style="padding-left:35px">
+        <a class="nav-link" href="/">HOME  <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=sports">Sports      <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=movies">Movies      <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=business">Business      <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=health">Health      <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=Automobile">Automobile      <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=religious">Religious          <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=covid">Covid-19         <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=entertainment">Entertainment        <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=science">Science         <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=technology">Technology       <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="padding-left:45px">
+        <a class="nav-link" href="/search/?query=memes">Memes        <span class="sr-only">(current)</span></a>
+      </li>
+      </ul>
+  </div>
+</nav>
+  
+    </div> 
+ 
+    <div class="container" bgcolor='black'> 
+      {% for new, des, i in mylist %} 
+             <h1>News:</h1> {{ new }} 
+              {{ value|linebreaks }} 
+              <img src="{{ i }}" alt="" height='500' width='1000'> 
+              
+  
+              <h2>Description:</h2>{{ des }} 
+              {{ value|linebreaks }} 
+              <br><br>
+              <br>
+      {% endfor %} 
+    </div> 
+  
+  </body> 
+</html> 
